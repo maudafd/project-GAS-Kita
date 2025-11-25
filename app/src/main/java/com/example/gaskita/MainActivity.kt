@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         }
         val email: String = intent.getStringExtra(  LoginActivity.KEY_USERNAME) ?: ""
 
-        val HeaderAcc = findViewById<TextView>(R.id.textViewPesanSelamatDatang)
+        val HeaderAcc = findViewById<TextView>(R.id.textViewHeader2)
         HeaderAcc.text = "Hello $email"
     }
 }

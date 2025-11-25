@@ -9,29 +9,13 @@
     android:background="#FAFAFA"
     tools:context=".MainActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:menu="@menu/bottom_nav_menu"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ProdukGas"
-        android:layout_width="410dp"
-        android:layout_height="285dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Pengumuman"
-        app:layout_constraintVertical_bias="0.305" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="365dp"
-        android:layout_height="139dp"
+        android:layout_width="0dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         app:cardBackgroundColor="#F9A825"
         app:cardCornerRadius="20dp"
         app:cardElevation="8dp"
@@ -45,35 +29,83 @@
             android:layout_height="wrap_content"
             android:padding="20dp"
             android:text="GAS-Kita Desa Suka Datang!"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewPesanSelamatDatang"
+            android:id="@+id/textViewHeader2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="75dp"
-            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:text="Halo, Faiz!"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/Pengumuman"
-        android:layout_width="412dp"
-        android:layout_height="155dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+    <TextView
+        android:id="@+id/textViewPengumuman"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pengumuman"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/DaftarPengumuman"
+        android:layout_width="0dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPengumuman" />
+
+    <TextView
+        android:id="@+id/textViewProduk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Daftar Produk"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/DaftarPengumuman" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewProduk"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/textViewProduk"
+        app:srcCompat="@drawable/outline_bucket" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/DaftarProduk"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProduk" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
