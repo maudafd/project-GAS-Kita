@@ -10,8 +10,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.textfield.TextInputEditText
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -21,16 +22,29 @@ class LoginActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val editTextEmailAddress:EditText = findViewById<EditText>(R.id.editTextEmailAddress)
+
+        val editTextEmailAddress = findViewById<EditText>(R.id.editTextEmailAddress)
+        editTextEmailAddress.text.toString()
         val editTextPassword = findViewById<EditText>(R.id.editTextPassword)
+        editTextPassword.text.toString()
         val btnLogin = findViewById<Button>(R.id.btnLogin)
 
         btnLogin.setOnClickListener {
-            // Langsung pindah ke Dashboard tanpa syarat dulu
+            val email: String = editTextEmailAddress.text.toString()
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra(KEY_USERNAME, email)
             startActivity(intent)
-            finish() // Agar kalau di-back tidak balik ke login
+
+            Toast.makeText(this,
+                "Button Login clicked",
+                Toast.LENGTH_SHORT)
+                .show()
         }
     }
 
+    companion object{
+        const val KEY_USERNAME = "username"
+    }
 }
+
+
