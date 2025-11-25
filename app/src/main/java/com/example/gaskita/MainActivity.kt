@@ -2,20 +2,10 @@ package com.example.gaskita
 
 import android.os.Bundle
 import android.widget.TextView
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.gaskita.ui.theme.GasKitaTheme
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         }
         val email: String = intent.getStringExtra(  LoginActivity.KEY_USERNAME) ?: ""
 
-        val HeaderAcc = findViewById<TextView>(R.id.HeaderAcc)
+        val HeaderAcc = findViewById<TextView>(R.id.textViewPesanSelamatDatang)
         HeaderAcc.text = "Hello $email"
     }
 }
