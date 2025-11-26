@@ -13,7 +13,7 @@
         android:theme="@style/Theme.GasKita">
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".Login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
