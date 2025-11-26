@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_home"
+        android:orderInCategory="100"
+        android:icon="@drawable/outline_home"
+        android:title="Home"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/nav_riwayat"
+        android:orderInCategory="100"
+        android:icon="@drawable/outline_history"
+        android:title="Riwayat"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/nav_profil"
+        android:orderInCategory="100"
+        android:icon="@drawable/outline_account"
+        android:title="Profil"
+        app:showAsAction="never"/>
+</menu>
