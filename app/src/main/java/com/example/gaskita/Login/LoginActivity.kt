@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.gaskita.Dashboard.HomeActivity
-import com.example.gaskita.MainActivity
 import com.example.gaskita.R
 
 class LoginActivity : AppCompatActivity(){
@@ -25,19 +24,22 @@ class LoginActivity : AppCompatActivity(){
         }
 
         val editTextEmailAddress = findViewById<EditText>(R.id.editTextEmailAddress)
-        editTextEmailAddress.text.toString()
         val editTextPassword = findViewById<EditText>(R.id.editTextPassword)
-        editTextPassword.text.toString()
         val btnLogin = findViewById<Button>(R.id.btnLogin)
 
         btnLogin.setOnClickListener {
             val email: String = editTextEmailAddress.text.toString()
+            
+            // Intent untuk berpindah ke HomeActivity
             val intent = Intent(this, HomeActivity::class.java)
             intent.putExtra(KEY_USERNAME, email)
             startActivity(intent)
+            
+            // Menutup LoginActivity agar user tidak bisa kembali ke login dengan tombol Back
+            finish()
 
             Toast.makeText(this,
-                "Button Login clicked",
+                "Login Berhasil",
                 Toast.LENGTH_SHORT)
                 .show()
         }
