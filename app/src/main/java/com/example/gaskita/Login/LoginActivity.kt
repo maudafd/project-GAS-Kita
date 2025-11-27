@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.gaskita.Dashboard.HomeActivity
 import com.example.gaskita.MainActivity
 import com.example.gaskita.R
 
@@ -31,7 +32,7 @@ class LoginActivity : AppCompatActivity(){
 
         btnLogin.setOnClickListener {
             val email: String = editTextEmailAddress.text.toString()
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             intent.putExtra(KEY_USERNAME, email)
             startActivity(intent)
 

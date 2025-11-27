@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.example.gaskita.R
 
 class RiwayatFragment : Fragment() {
@@ -14,6 +15,9 @@ class RiwayatFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_riwayat, container, false)
+        val view = inflater.inflate(R.layout.fragment_riwayat, container, false)
+        val textViewTitle = view.findViewById<TextView>(R.id.textViewTitleRiwayat)
+        textViewTitle.text = "Riwayat Fragment"
+        return view
     }
 }
