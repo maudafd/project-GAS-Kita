@@ -29,7 +29,6 @@ class LoginActivity : AppCompatActivity(){
 
         btnLogin.setOnClickListener {
             val email: String = editTextEmailAddress.text.toString()
-            
             // Intent untuk berpindah ke HomeActivity
             val intent = Intent(this, HomeActivity::class.java)
             intent.putExtra(KEY_USERNAME, email)

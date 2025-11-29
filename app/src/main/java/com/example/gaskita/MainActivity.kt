@@ -18,8 +18,5 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val email: String = intent.getStringExtra(  LoginActivity.KEY_USERNAME) ?: ""
-        val HeaderAcc = findViewById<TextView>(R.id.textViewHeader2)
-        HeaderAcc.text = "Hello $email"
     }
 }
