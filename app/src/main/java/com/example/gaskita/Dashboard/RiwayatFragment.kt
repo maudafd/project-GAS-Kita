@@ -18,8 +18,8 @@ class RiwayatFragment : Fragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_riwayat, container, false)
-        val textViewTitle = view.findViewById<TextView>(R.id.textViewTitleRiwayat)
-        textViewTitle.text = "Riwayat Pemesanan"
+//        val textViewTitle = view.findViewById<TextView>(R.id.textViewTitleRiwayat)
+//        textViewTitle.text = "Riwayat Pemesanan"
         val spinnerFilter = view.findViewById<Spinner>(R.id.spinnerFilter)
 
         val items = listOf(
