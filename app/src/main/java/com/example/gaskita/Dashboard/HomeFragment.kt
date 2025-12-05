@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gaskita.Dashboard.Pengumuman
@@ -36,7 +38,12 @@ class HomeFragment : Fragment() {
         )
 
         val dataProduk = listOf(
-            ProdukGas("Elpiji 3 Kg", 21000, "Stok: Tersedia", R.drawable.lpg3kg), // ganti ic_gas sesuai gambar kamu
+            ProdukGas(
+                "Elpiji 3 Kg",
+                21000,
+                "Stok: Tersedia",
+                R.drawable.lpg3kg
+            ), // ganti ic_gas sesuai gambar kamu
             ProdukGas("Elpiji 6 Kg", 60000, "Stok: Habis", R.drawable.lpg6kg),
             ProdukGas("Elpiji 12 Kg", 120000, "Stok: Tersedia", R.drawable.lpg12kg)
         )
@@ -50,8 +57,6 @@ class HomeFragment : Fragment() {
         DaftarProduk.layoutManager = LinearLayoutManager(context)
         DaftarProduk.adapter = produkAdapter
         return view
-
-
 
     }
 }

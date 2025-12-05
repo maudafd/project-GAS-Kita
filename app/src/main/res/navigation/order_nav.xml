@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/order_nav"
+    app:startDestination="@id/keranjangFragment">
+
+    <fragment
+        android:id="@+id/keranjangFragment"
+        android:name="com.example.gaskita.Order.KeranjangFragment"
+        android:label="fragment_keranjang"
+        tools:layout="@layout/fragment_keranjang" >
+        <action
+            android:id="@+id/action_keranjangFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.gaskita.Order.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" >
+        <action
+            android:id="@+id/action_checkoutFragment_to_pembayaranFragment"
+            app:destination="@id/pembayaranFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pembayaranFragment"
+        android:name="com.example.gaskita.Order.PembayaranFragment"
+        android:label="fragment_pembayaran"
+        tools:layout="@layout/fragment_pembayaran" />
+</navigation>
