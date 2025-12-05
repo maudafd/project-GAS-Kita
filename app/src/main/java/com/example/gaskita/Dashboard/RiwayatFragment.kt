@@ -24,9 +24,9 @@ class RiwayatFragment : Fragment() {
         val recyclerView = view.findViewById<RecyclerView>(R.id.RiwayatPemesanan)
 
         val items = listOf(
+            "Hari ini",
             "Minggu ini",
-            "Bulan ini",
-            "3 Bulan"
+            "Bulan ini"
         )
 
         val listRiwayat = listOf(
