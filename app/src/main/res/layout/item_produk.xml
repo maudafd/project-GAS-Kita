@@ -30,38 +30,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/white"
-            android:text="Detail Lengkap"
+            android:minHeight="0dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:text="Beli Sekarang"
+            android:textAllCaps="false"
             android:textColor="#000000"
             android:textSize="12sp"
-            android:textAllCaps="false"
             app:cornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/txtNamaProduk"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="154dp"
+            android:layout_height="24dp"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="8dp"
             android:text="Elpiji 3 Kg"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/buttonDetail"
             app:layout_constraintStart_toEndOf="@+id/imgProduk"
             app:layout_constraintTop_toTopOf="@+id/imgProduk" />
 
         <TextView
             android:id="@+id/txtHargaProduk"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="154dp"
+            android:layout_height="24dp"
             android:layout_marginTop="4dp"
             android:text="Rp. 21.000"
             android:textColor="@android:color/black"
             android:textSize="16sp"
-            app:layout_constraintEnd_toStartOf="@+id/buttonDetail"
             app:layout_constraintStart_toStartOf="@+id/txtNamaProduk"
             app:layout_constraintTop_toBottomOf="@+id/txtNamaProduk" />
 
@@ -76,6 +75,17 @@
             app:layout_constraintEnd_toStartOf="@+id/buttonDetail"
             app:layout_constraintStart_toStartOf="@+id/txtNamaProduk"
             app:layout_constraintTop_toBottomOf="@+id/txtHargaProduk" />
+
+        <ImageButton
+            android:id="@+id/ImgBtnKeranjang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#A39382"
+            app:layout_constraintEnd_toEndOf="@+id/buttonDetail"
+            app:layout_constraintStart_toStartOf="@+id/buttonDetail"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:srcCompat="@drawable/carbon__shopping_cart__1_" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
