@@ -85,7 +85,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/textViewProduk"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="@+id/textViewProduk"
-        app:srcCompat="@drawable/outline_bucket" />
+        app:srcCompat="@drawable/carbon__shopping_cart__2_" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/DaftarProduk"
