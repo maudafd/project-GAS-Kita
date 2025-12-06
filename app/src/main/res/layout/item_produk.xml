@@ -85,7 +85,7 @@
             app:layout_constraintStart_toStartOf="@+id/buttonDetail"
             app:layout_constraintTop_toTopOf="parent"
 
-            app:srcCompat="@drawable/carbon__shopping_cart__1_" />
+            app:srcCompat="@drawable/carbon__shopping_cart_plus" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
