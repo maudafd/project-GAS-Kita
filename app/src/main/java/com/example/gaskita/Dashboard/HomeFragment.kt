@@ -52,8 +52,20 @@ class HomeFragment : Fragment() {
         DaftarPengumuman.layoutManager = LinearLayoutManager(context)
         DaftarPengumuman.adapter = pengumumanAdapter
 
-        // 4. Pasang Adapter Produk
-        val produkAdapter = ProdukAdapter(dataProduk)
+        // 4. Pasang Adapter Produk dgn aksi navigasi
+        val produkAdapter = ProdukAdapter(dataProduk,
+            // 1. Nama parameter harus 'onAddToCartClick' (sesuai definisi di adapter)
+            // 2. Variabel di dalam lambda adalah 'produk' (mewakili satu item), bukan 'produkList'
+            onAddToCartClick = { produk ->
+                // Navigasi ke KeranjangFragment
+                findNavController().navigate(R.id.action_homeFragment_to_keranjangFragment)
+            },
+            // 3. Nama variabel di dalam lambda juga diganti menjadi 'produk'
+            onBuyNowClick = { produk ->
+                // Navigasi ke CheckoutFragment
+                findNavController().navigate(R.id.action_homeFragment_to_checkoutFragment)
+            }
+        )
         DaftarProduk.layoutManager = LinearLayoutManager(context)
         DaftarProduk.adapter = produkAdapter
         return view

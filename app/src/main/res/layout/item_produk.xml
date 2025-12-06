@@ -26,7 +26,7 @@
             tools:src="@tools:sample/avatars" />
 
         <Button
-            android:id="@+id/buttonDetail"
+            android:id="@+id/btnBeliSekarang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/white"
@@ -72,17 +72,17 @@
             android:text="Stok : Tersedia"
             android:textColor="@android:color/black"
             android:textSize="14sp"
-            app:layout_constraintEnd_toStartOf="@+id/buttonDetail"
+            app:layout_constraintEnd_toStartOf="@+id/btnBeliSekarang"
             app:layout_constraintStart_toStartOf="@+id/txtNamaProduk"
             app:layout_constraintTop_toBottomOf="@+id/txtHargaProduk" />
 
         <ImageButton
-            android:id="@+id/ImgBtnKeranjang"
+            android:id="@+id/btnKeranjang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#A39382"
-            app:layout_constraintEnd_toEndOf="@+id/buttonDetail"
-            app:layout_constraintStart_toStartOf="@+id/buttonDetail"
+            app:layout_constraintEnd_toEndOf="@+id/btnBeliSekarang"
+            app:layout_constraintStart_toStartOf="@+id/btnBeliSekarang"
             app:layout_constraintTop_toTopOf="parent"
 
             app:srcCompat="@drawable/carbon__shopping_cart_plus" />
