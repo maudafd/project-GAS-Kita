@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gaskita.Dashboard.ProdukGas
@@ -36,7 +38,17 @@ class KeranjangFragment : Fragment() {
         recyclerView.adapter = adapterSaya
         recyclerView.layoutManager = LinearLayoutManager(context)
 
+
+
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val buttonGoToCheckout = view.findViewById<Button>(R.id.buttonGoToCheckout)
+        buttonGoToCheckout.setOnClickListener {
+            findNavController().navigate(R.id.action_keranjangFragment_to_checkoutFragment)
+        }
+    }
 }

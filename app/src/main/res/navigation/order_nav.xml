@@ -18,14 +18,5 @@
         android:id="@+id/checkoutFragment"
         android:name="com.example.gaskita.Order.CheckoutFragment"
         android:label="fragment_checkout"
-        tools:layout="@layout/fragment_checkout" >
-        <action
-            android:id="@+id/action_checkoutFragment_to_pembayaranFragment"
-            app:destination="@id/pembayaranFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/pembayaranFragment"
-        android:name="com.example.gaskita.Order.PembayaranFragment"
-        android:label="fragment_pembayaran"
-        tools:layout="@layout/fragment_pembayaran" />
+        tools:layout="@layout/fragment_checkout" />
 </navigation>
