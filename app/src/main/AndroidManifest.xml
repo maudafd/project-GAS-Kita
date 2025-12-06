@@ -12,15 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GasKita">
         <activity
-            android:name=".Order.OrderActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".Login.LoginActivity"
             android:exported="true">
             <intent-filter>
