@@ -1,5 +1,6 @@
 package com.example.gaskita.Dashboard
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,7 +15,9 @@ import com.example.gaskita.Dashboard.Pengumuman
 import com.example.gaskita.Login.LoginActivity
 import com.example.gaskita.Dashboard.ProdukAdapter
 import com.example.gaskita.Dashboard.ProdukGas
+import com.example.gaskita.Order.orderActivity
 import com.example.gaskita.R
+import kotlin.jvm.java
 
 class HomeFragment : Fragment() {
     override fun onCreateView(
@@ -52,22 +55,29 @@ class HomeFragment : Fragment() {
         DaftarPengumuman.layoutManager = LinearLayoutManager(context)
         DaftarPengumuman.adapter = pengumumanAdapter
 
+        val imageButtonKeranjang = view.findViewById<ImageButton>(R.id.imageButtonKeranjang)
+        imageButtonKeranjang.setOnClickListener {
+            val intent = Intent(requireContext(), orderActivity::class.java)
+            startActivity(intent)
+        }
+
+
         // 4. Pasang Adapter Produk dgn aksi navigasi
-        val produkAdapter = ProdukAdapter(dataProduk,
-            // 1. Nama parameter harus 'onAddToCartClick' (sesuai definisi di adapter)
-            // 2. Variabel di dalam lambda adalah 'produk' (mewakili satu item), bukan 'produkList'
-            onAddToCartClick = { produk ->
-                // Navigasi ke KeranjangFragment
-                findNavController().navigate(R.id.action_homeFragment_to_keranjangFragment)
-            },
-            // 3. Nama variabel di dalam lambda juga diganti menjadi 'produk'
-            onBuyNowClick = { produk ->
-                // Navigasi ke CheckoutFragment
-                findNavController().navigate(R.id.action_homeFragment_to_checkoutFragment)
-            }
-        )
-        DaftarProduk.layoutManager = LinearLayoutManager(context)
-        DaftarProduk.adapter = produkAdapter
+//        val produkAdapter = ProdukAdapter(dataProduk,
+//            // 1. Nama parameter harus 'onAddToCartClick' (sesuai definisi di adapter)
+//            // 2. Variabel di dalam lambda adalah 'produk' (mewakili satu item), bukan 'produkList'
+//            onAddToCartClick = { produk ->
+//                // Navigasi ke KeranjangFragment
+////                findNavController().navigate(R.id.action_homeFragment_to_keranjangFragment)
+//            },
+//            // 3. Nama variabel di dalam lambda juga diganti menjadi 'produk'
+//            onBuyNowClick = { produk ->
+//                // Navigasi ke CheckoutFragment
+////                findNavController().navigate(R.id.action_homeFragment_to_checkoutFragment)
+//            }
+//        )
+//        DaftarProduk.layoutManager = LinearLayoutManager(context)
+//        DaftarProduk.adapter = produkAdapter
         return view
 
     }
