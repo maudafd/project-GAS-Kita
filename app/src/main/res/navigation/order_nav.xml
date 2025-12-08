@@ -18,5 +18,14 @@
         android:id="@+id/checkoutFragment"
         android:name="com.example.gaskita.Order.CheckoutFragment"
         android:label="fragment_checkout"
-        tools:layout="@layout/fragment_checkout" />
+        tools:layout="@layout/fragment_checkout" >
+        <action
+            android:id="@+id/action_checkoutFragment_to_paymentCashFragment"
+            app:destination="@id/paymentCashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentCashFragment"
+        android:name="com.example.gaskita.Order.PaymentCashFragment"
+        android:label="fragment_payment_cash"
+        tools:layout="@layout/fragment_payment_cash" />
 </navigation>
