@@ -54,5 +54,4 @@ class PaymentCashFragment : Fragment() {
             requireActivity().finish()
         }
     }
-
 }

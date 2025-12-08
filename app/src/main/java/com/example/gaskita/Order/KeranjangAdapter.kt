@@ -29,10 +29,10 @@ class KeranjangAdapter(private val listData: List<KeranjangModel>) :
     // Bagian ini mengisi data (teks/gambar) ke dalam layout yang sudah dibuat tadi
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = listData[position]
-        holder.namaProduk.text = item.namaProduk
-        holder.hargaProduk.text = item.hargaProduk
+        holder.namaProduk.text = item.nama
+        holder.hargaProduk.text = item.harga
         // Kita pakai gambar dummy android dulu biar tidak error
-        holder.imgProduk.setImageResource(R.drawable.ic_launcher_foreground)
+        holder.imgProduk.setImageResource(item.gambar)
     }
 
     // Memberitahu ada berapa banyak item yang harus ditampilkan

@@ -27,18 +27,14 @@ class KeranjangFragment : Fragment() {
 
         // 3. Siapkan data dummy (Data Pura-pura)
         val dataBelanjaan = listOf(
-            KeranjangModel("Gas Elpiji 3kg", "Rp 20.000", R.drawable.ic_launcher_foreground),
-            KeranjangModel("Bright Gas 5kg", "Rp 65.000", R.drawable.ic_launcher_foreground),
-            KeranjangModel("Gas 12kg Blue", "Rp 150.000", R.drawable.ic_launcher_foreground),
-            KeranjangModel("Regulator Gas", "Rp 85.000", R.drawable.ic_launcher_foreground)
+            KeranjangModel("Gas Elpiji 3kg", "Rp 20.000", R.drawable.lpg3kg),
+            KeranjangModel("Gas Elpiji 6kg", "Rp 65.000", R.drawable.lpg6kg)
         )
 
         // 4. Pasang Adapter ke RecyclerView
         val adapterSaya = KeranjangAdapter(dataBelanjaan)
         recyclerView.adapter = adapterSaya
         recyclerView.layoutManager = LinearLayoutManager(context)
-
-
 
         return view
     }
