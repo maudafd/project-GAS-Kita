@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".Order.PaymentCashFragment">
-
 
     <ImageButton
         android:id="@+id/BtnKembaliRincian"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/outline_back_icon"
+        android:scaleType="centerInside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,149 +24,56 @@
         android:id="@+id/textViewRincianCash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="128dp"
         android:text="Rincian Pesanan"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/BtnKembaliRincian"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/BtnKembaliRincian"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.029" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewCash"
-        android:layout_width="411dp"
-        android:layout_height="258dp"
-        android:layout_marginBottom="408dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.058" />
+        app:layout_constraintTop_toTopOf="@+id/BtnKembaliRincian" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
-        android:layout_width="350dp"
-        android:layout_height="100dp"
-        android:padding="10dp"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textViewCatatan"
+        android:layout_width="354dp"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        android:background="#F6CD88"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Estimasi Tiba : 10-15 menit\nPastikan ada orang di alamat tujuan"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerViewCash"
-        app:layout_constraintVertical_bias="0.059">
+        app:layout_constraintTop_toBottomOf="@+id/textViewRincianCash" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FCEFC6">
+    <TextView
+        android:id="@+id/textViewIsi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Metode Pembayaran: Cash"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCatatan"
+        app:layout_constraintStart_toStartOf="@+id/textViewCatatan"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCatatan" />
 
-            <TextView
-                android:id="@+id/textViewEstimasi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Estimasi Tiba : 10-15 Menit"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.197" />
-
-            <TextView
-                android:id="@+id/textViewPembayaranCash"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Pembayaran : Cash"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/textViewEstimasi"
-                app:layout_constraintStart_toStartOf="@+id/textViewEstimasi"
-                app:layout_constraintTop_toBottomOf="@+id/textViewEstimasi"
-                app:layout_constraintVertical_bias="0.666" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
-        android:layout_width="350dp"
-        android:layout_height="100dp"
+    <Button
+        android:id="@+id/btnPesananSelesai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pesanan Selesai"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/cardView3"
-        app:layout_constraintStart_toStartOf="@+id/cardView3"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3"
-        app:layout_constraintVertical_bias="0.095">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textViewAlamat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Alamat : "
-                android:textSize="17dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.054"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.049" />
-
-            <TextView
-                android:id="@+id/textViewAlamat2"
-                android:layout_width="324dp"
-                android:layout_height="74dp"
-                android:text="Gang Buntu, No.10 Desa Sukadatang (depan sungai)"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/textViewAlamat"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/textViewAlamat"
-                app:layout_constraintTop_toBottomOf="@+id/textViewAlamat"
-                app:layout_constraintVertical_bias="0.157" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="80dp"
-        app:cardElevation="8dp"
-        app:cardBackgroundColor="#F9A825"
-        app:cardCornerRadius="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView4" >
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/btnPesananSelesai"
-                android:layout_width="274dp"
-                android:layout_height="47dp"
-                android:paddingLeft="30dp"
-                android:paddingTop="10dp"
-                android:paddingRight="30dp"
-                android:paddingBottom="10dp"
-                android:text="Pesanan Selesai"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                app:backgroundTint="#FFC766"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.496"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.356" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintEnd_toEndOf="@+id/textViewIsi"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/textViewIsi"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIsi"
+        app:layout_constraintVertical_bias="0.732" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

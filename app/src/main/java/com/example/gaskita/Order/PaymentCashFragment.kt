@@ -31,17 +31,6 @@ class PaymentCashFragment : Fragment() {
             ): View? {
                 val view = inflater.inflate(R.layout.fragment_payment_cash, container, false)
 
-                val recycler = view.findViewById<RecyclerView>(R.id.recyclerViewCash)
-
-                // Data dari keranjang adapter
-                val listKeranjang = listOf(
-                    KeranjangModel("Gas 3kg", "Rp 21.000", R.drawable.lpg3kg),
-                    KeranjangModel("Gas 12kg", "Rp 230.000", R.drawable.lpg6kg)
-                )
-
-
-                recycler.layoutManager = LinearLayoutManager(requireContext())
-                recycler.adapter = KeranjangAdapter(listKeranjang) //menggunakan adapter yang sama
                 return view
             }
         }
