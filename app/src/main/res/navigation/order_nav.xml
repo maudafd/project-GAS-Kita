@@ -22,10 +22,18 @@
         <action
             android:id="@+id/action_checkoutFragment_to_paymentCashFragment"
             app:destination="@id/paymentCashFragment" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_paymentQrisFragment"
+            app:destination="@id/paymentQrisFragment" />
     </fragment>
     <fragment
         android:id="@+id/paymentCashFragment"
         android:name="com.example.gaskita.Order.PaymentCashFragment"
         android:label="fragment_payment_cash"
         tools:layout="@layout/fragment_payment_cash" />
+    <fragment
+        android:id="@+id/paymentQrisFragment"
+        android:name="com.example.gaskita.Order.PaymentQrisFragment"
+        android:label="fragment_payment_qris"
+        tools:layout="@layout/fragment_payment_qris" />
 </navigation>
