@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity(){
         val editTextEmailAddress = findViewById<EditText>(R.id.editTextEmailAddress)
         val editTextPassword = findViewById<EditText>(R.id.editTextPassword)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
-
+        //tombol aksi ketika tombol login diklik
         btnLogin.setOnClickListener {
             val email: String = editTextEmailAddress.text.toString()
             // Intent untuk berpindah ke HomeActivity
@@ -43,7 +43,7 @@ class LoginActivity : AppCompatActivity(){
                 .show()
         }
     }
-
+    // Constant key untuk passing data username antar Activity
     companion object{
         const val KEY_USERNAME = "username"
     }

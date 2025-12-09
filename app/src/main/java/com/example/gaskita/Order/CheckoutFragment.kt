@@ -23,15 +23,15 @@ class CheckoutFragment : Fragment() {
         val recyclerView = view.findViewById<RecyclerView>(R.id.daftarCheckout)
 
         // Siapkan data dummy (Data Pura-pura)
-        val dataBelanjaan = listOf(
-            KeranjangModel("Gas Elpiji 3kg", "Rp 20.000", R.drawable.lpg3kg),
-            KeranjangModel("Gas Elpiji 6kg", "Rp 65.000", R.drawable.lpg6kg)
+        val dataCheckout = listOf(
+            CheckoutModel("Gas Elpiji 3kg", "Rp 20.000", R.drawable.lpg3kg),
+            CheckoutModel("Gas Elpiji 6kg", "Rp 65.000", R.drawable.lpg6kg)
         )
 
         // Pasang Adapter ke RecyclerView
-        val adapterSaya = KeranjangAdapter(dataBelanjaan)
-        recyclerView.adapter = adapterSaya
-        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = CheckoutAdapter(dataCheckout)
+
         return view
     }
 

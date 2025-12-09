@@ -19,15 +19,8 @@ class RiwayatFragment : Fragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_riwayat, container, false)
-
-        val spinnerFilter = view.findViewById<Spinner>(R.id.spinnerFilter)
         val recyclerView = view.findViewById<RecyclerView>(R.id.RiwayatPemesanan)
 
-        val items = listOf(
-            "Hari ini",
-            "Minggu ini",
-            "Bulan ini"
-        )
 
         val listRiwayat = listOf(
             RiwayatPemesanan("#P001234", "23 November 2023", "Dalam Perjalanan", "GAS Elpiji 3kg", 21000),
@@ -44,14 +37,6 @@ class RiwayatFragment : Fragment() {
 
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = RiwayatAdapter(listRiwayat)
-
-        val adapter = ArrayAdapter(
-            requireContext(),
-            android.R.layout.simple_spinner_dropdown_item,
-            items
-        )
-        spinnerFilter.adapter = adapter
-        spinnerFilter.setSelection(items.indexOf("Bulan ini"))
 
         return view
     }

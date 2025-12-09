@@ -76,16 +76,6 @@
             app:layout_constraintStart_toStartOf="@+id/txtNamaProduk"
             app:layout_constraintTop_toBottomOf="@+id/txtHargaProduk" />
 
-        <ImageButton
-            android:id="@+id/btnKeranjang"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#A39382"
-            app:layout_constraintEnd_toEndOf="@+id/btnBeliSekarang"
-            app:layout_constraintStart_toStartOf="@+id/btnBeliSekarang"
-            app:layout_constraintTop_toTopOf="parent"
-
-            app:srcCompat="@drawable/carbon__shopping_cart_plus" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

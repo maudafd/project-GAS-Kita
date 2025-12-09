@@ -31,7 +31,6 @@ class KeranjangAdapter(private val listData: List<KeranjangModel>) :
         val item = listData[position]
         holder.namaProduk.text = item.nama
         holder.hargaProduk.text = item.harga
-        // Kita pakai gambar dummy android dulu biar tidak error
         holder.imgProduk.setImageResource(item.gambar)
     }
 
