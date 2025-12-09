@@ -22,6 +22,6 @@ class HomeActivity : AppCompatActivity() {
         }
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navControler = findNavController(R.id.fragmentContainerView)
-        bottomNavigationView.setupWithNavController(navControler)
+        bottomNavigationView.setupWithNavController(navControler) //library mengurus perpindahan
     }
 }

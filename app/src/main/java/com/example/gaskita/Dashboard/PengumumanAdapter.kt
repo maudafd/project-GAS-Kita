@@ -31,7 +31,8 @@ class PengumumanAdapter(private val listPengumuman: List<Pengumuman>) : Recycler
 
     // Called to display the data at a specific position
     override fun onBindViewHolder(holder: PengumumanViewHolder, position: Int) {
-        val pengumuman = listPengumuman[position]
+        val pengumuman = listPengumuman[position] //ambil data dari urutan
+        //tempelkan data ke tampilan
         holder.textViewJudulPengumuman.text = pengumuman.judul
         holder.textViewIsiPengumuman.text = pengumuman.deskripsi
         holder.textViewTanggalPengumuman.text = pengumuman.tanggal

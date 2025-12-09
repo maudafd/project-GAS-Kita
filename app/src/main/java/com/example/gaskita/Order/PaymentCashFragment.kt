@@ -23,23 +23,13 @@ class PaymentCashFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        class RincianPesananFragment : Fragment() {
-
-            override fun onCreateView(
-                inflater: LayoutInflater, container: ViewGroup?,
-                savedInstanceState: Bundle?
-            ): View? {
-                val view = inflater.inflate(R.layout.fragment_payment_cash, container, false)
-
-                return view
-            }
-        }
-
 
         val btnPesananSelesai = view.findViewById<View>(R.id.btnPesananSelesai)
         btnPesananSelesai.setOnClickListener {
+            //niat pulang
             val intent = Intent(requireActivity(), HomeActivity::class.java)
             startActivity(intent)
+            //hapus history
             requireActivity().finish()
         }
     }
