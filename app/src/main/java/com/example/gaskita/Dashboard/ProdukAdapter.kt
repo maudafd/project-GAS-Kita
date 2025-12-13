@@ -1,5 +1,6 @@
 package com.example.gaskita.Dashboard
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -33,6 +34,7 @@ class ProdukAdapter(
         return ProdukViewHolder(view)
     }
     //ambil data
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ProdukViewHolder, position: Int) {
         val produk = produkList[position]
         //tempelkan
