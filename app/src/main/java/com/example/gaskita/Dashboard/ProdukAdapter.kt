@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gaskita.Order.orderActivity
+import com.example.gaskita.Order.OrderActivity
 import com.example.gaskita.R
 import kotlin.jvm.java
 
@@ -43,7 +43,7 @@ class ProdukAdapter(
 
         holder.btnBeliSekarang.setOnClickListener {
             val context = holder.itemView.context
-            val intent = Intent(context, orderActivity::class.java)
+            val intent = Intent(context, OrderActivity::class.java)
 
             // Kirim data ke orderActivity
             intent.putExtra("produkNama", produk.nama)

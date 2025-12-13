@@ -10,10 +10,9 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gaskita.Dashboard.Pengumuman
 import com.example.gaskita.Login.LoginActivity
 import com.example.gaskita.R
-import com.example.gaskita.Order.orderActivity
+import com.example.gaskita.Order.OrderActivity
 
 class HomeFragment : Fragment() {
 
@@ -53,7 +52,7 @@ class HomeFragment : Fragment() {
         // Tombol ikon keranjang di header
         val imageButtonKeranjang = view.findViewById<ImageButton>(R.id.imageButtonKeranjang)
         imageButtonKeranjang.setOnClickListener {
-            val intent = Intent(requireContext(), orderActivity::class.java)
+            val intent = Intent(requireContext(), OrderActivity::class.java)
             startActivity(intent)
         }
 
